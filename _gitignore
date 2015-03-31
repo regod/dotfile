@@ -1,0 +1,29 @@
+# python
+*.py[cod]
+
+# C extensions
+*.so
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# vim
+*~
+*.swp
+
+# mac os
+.DS_Store
+
+# my workspace
+/logs
+/db
+/db/sop.schema
+org.eclipse.core.resources.prefs
+debug.env
+
+# my project
