@@ -1,0 +1,13 @@
+set nocompatible
+set showcmd
+set nobackup  " do not keep a backup file, use versions instead
+set hlsearch  " Highlight search things
+set backspace=eol,start,indent
+
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set encoding=utf-8
