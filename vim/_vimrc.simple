@@ -3,6 +3,7 @@ set showcmd
 set nobackup  " do not keep a backup file, use versions instead
 set hlsearch  " Highlight search things
 set backspace=eol,start,indent
+syntax on
 
 set expandtab
 set shiftwidth=4
