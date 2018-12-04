@@ -22,6 +22,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
@@ -92,7 +93,8 @@ endif
 
 " optional
 set scrolloff=3
-set ruler " show the cursor position all the time
+set ruler
+set number
 set mouse=
 set backspace=eol,start,indent
 set hlsearch "Highlight search things
@@ -100,6 +102,9 @@ set showmatch "Show matching bracets when text indicator is over them
 set nobackup " do not keep a backup file, use versions instead
 set fileencodings=utf-8,gb18030,utf-16,big5
 set colorcolumn=80 " Highlight column
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,9 +134,21 @@ Plugin 'gmarik/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'surround.vim'
+
 Plugin 'taglist.vim'
+
+Plugin 'nvie/vim-flake8'
+
+Plugin 'ctrlp.vim'
+
+Plugin 'godlygeek/tabular'
+
+Plugin 'plasticboy/vim-markdown' " markdown
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -150,3 +167,16 @@ let Tlist_Auto_Open=0    "在启动vim后，自动打开taglist窗口
 let Tlist_File_Fold_Auto_Close=1    "taglist只显示当前文件的tag，其他文件的tag折叠
 let Tlist_Close_On_Select=0    "当文件或tag选中的时候，自动关闭Taglist
 
+
+
+"let g:jedi#completions_command = '<C-N>'
+
+" flake8
+autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+"autocmd BufWritePost *.py call Flake8()
+
+" YouCompleteMe
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" vim-markdown
+" autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
