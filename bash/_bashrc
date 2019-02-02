@@ -1,0 +1,17 @@
+alias ls='ls -F'
+alias ssh='ssh -A'
+[ -f /usr/local/bin/vim ] && alias vim='/usr/local/bin/vim'
+
+# mkdir python package
+mkpkg() {
+    mkdir $1
+    touch $1/__init__.py
+}
+
+# git completion
+[ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
+if [ -f ~/.git-prompt.sh ];then
+    source ~/.git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    PS1='[\u@\h:\W$(__git_ps1 " (%s)")]\$ '
+fi

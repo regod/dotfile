@@ -100,7 +100,9 @@ set backspace=eol,start,indent
 set hlsearch "Highlight search things
 set showmatch "Show matching bracets when text indicator is over them
 set nobackup " do not keep a backup file, use versions instead
-set fileencodings=utf-8,gb18030,utf-16,big5
+set fileencodings=utf-8,gb2312,gbk,gb18030,utf-16,big5
+set termencoding=utf-8
+set encoding=utf-8
 set colorcolumn=80 " Highlight column
 " Enable folding
 set foldmethod=indent
@@ -136,7 +138,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'  " need manual compile
 
 Plugin 'surround.vim'
 
@@ -148,7 +150,7 @@ Plugin 'ctrlp.vim'
 
 Plugin 'godlygeek/tabular'
 
-Plugin 'plasticboy/vim-markdown' " markdown
+" Plugin 'plasticboy/vim-markdown' " markdown
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
