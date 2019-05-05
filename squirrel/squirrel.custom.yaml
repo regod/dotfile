@@ -1,0 +1,5 @@
+patch:
+    how_notifications_via_notification_center: true
+    style/horizontal: true
+    style/font_point: 18
+    app_options/com.googlecode.iterm2: {}
