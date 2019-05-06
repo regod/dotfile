@@ -15,3 +15,5 @@ if [ -f ~/.git-prompt.sh ];then
     GIT_PS1_SHOWDIRTYSTATE=true
     PS1='[\u@\h:\W$(__git_ps1 " (%s)")]\$ '
 fi
+
+source ~/.hundun.sh
