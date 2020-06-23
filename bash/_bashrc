@@ -18,4 +18,4 @@ fi
 
 export HOMEBREW_NO_AUTO_UPDATE=0
 
-source ~/.hundun.sh
+[ -f ~/.hundun.sh ] && source ~/.hundun.sh

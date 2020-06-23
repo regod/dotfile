@@ -1,0 +1,10 @@
+prefix_dir=/Users/regod/Desktop/hundun/project
+sname=zcy
+new-session -s $sname -c $prefix_dir
+# split-window -h
+rename-window cms
+send-keys -t $sname:cms 'cd cms_server_v2 && act' Enter
+new-window -n course -c $prefix_dir
+send-keys -t $sname:course 'cd course_server && act' Enter
+new-window -n sslive -c $prefix_dir
+send-keys -t $sname:sslive 'cd sslive && act' Enter
