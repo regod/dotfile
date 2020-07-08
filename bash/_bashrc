@@ -8,6 +8,16 @@ mkpkg() {
     touch $1/__init__.py
 }
 
+SOCKS5="socks5://127.0.0.1:1082"
+proxy_set() {
+    export http_proxy=$SOCKS5
+    export https_proxy=$SOCKS5
+}
+proxy_del() {
+    unset http_proxy
+    unset https_proxy
+}
+
 # git completion
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 if [ -f ~/.git-prompt.sh ];then
@@ -19,3 +29,4 @@ fi
 export HOMEBREW_NO_AUTO_UPDATE=0
 
 [ -f ~/.hundun.sh ] && source ~/.hundun.sh
+[ -f ~/.gengmei.sh ] && source ~/.gengmei.sh
