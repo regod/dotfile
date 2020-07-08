@@ -3,3 +3,5 @@
     email = regod.chung@gmail.com
 [includeIf "gitdir:~/Desktop/hundun/project/"]
     path = ~/Desktop/hundun/project/.gitconfig
+[includeIf "gitdir:~/projects/gengmei/"]
+    path = ~/projects/gengmei/.gitconfig
