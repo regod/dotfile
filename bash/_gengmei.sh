@@ -8,7 +8,10 @@ function act(){
         prj_name=$1
     fi
     act_bin=~/envs/gengmei/$prj_name/bin/activate
-    [ -f $act_bin ] && source $act_bin
+    if [ ! -f $act_bin ];then
+        act_bin=`poetry env info --path`/bin/activate
+    fi
+    [ -f "$act_bin" ] && source $act_bin
 }
 
 function make_env() {
