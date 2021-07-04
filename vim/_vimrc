@@ -150,11 +150,14 @@ Plugin 'ctrlp.vim'
 
 Plugin 'godlygeek/tabular'
 
+Plugin 'fatih/vim-go'
+
 " Plugin 'plasticboy/vim-markdown' " markdown
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+au BufNewFile,BufRead *.conf setf dosini
 
 
 

@@ -1,3 +1,4 @@
+[ -d /usr/local/opt/mysql@5.6/bin ] && export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 alias ls='ls -F'
 alias ssh='ssh -A'
 [ -f /usr/local/bin/vim ] && alias vim='/usr/local/bin/vim'
@@ -26,7 +27,8 @@ if [ -f ~/.git-prompt.sh ];then
     PS1='[\u@\h:\W$(__git_ps1 " (%s)")]\$ '
 fi
 
-export HOMEBREW_NO_AUTO_UPDATE=0
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 [ -f ~/.hundun.sh ] && source ~/.hundun.sh
 [ -f ~/.gengmei.sh ] && source ~/.gengmei.sh
+
