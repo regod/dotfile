@@ -33,3 +33,7 @@ curl https://raw.githubusercontent.com/regod/dotfile/master/nginx/nginx.conf -o 
 nginx -t
 nginx
 mkdir -p /etc/nginx/cert/eleave.org/
+
+mkdir -p ~/.vim/syntax/
+curl "https://www.vim.org/scripts/download_script.php?src_id=19394" -o ~/.vim/syntax/nginx.vim
+echo "au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,*/nginx/*.conf if &ft == '' | setfiletype nginx | endif" >> ~/.vim/filetype.vim
