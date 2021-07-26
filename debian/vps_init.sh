@@ -15,6 +15,7 @@ curl https://raw.githubusercontent.com/regod/dotfile/master/vim/_vimrc.simple -o
 
 color_echo "apt update"
 apt-get update
+apt-get install -y git
 
 # locale
 color_echo "locale"
