@@ -5,3 +5,5 @@
     path = ~/Desktop/hundun/project/.gitconfig
 [includeIf "gitdir:~/projects/gengmei/"]
     path = ~/projects/gengmei/.gitconfig
+[includeIf "gitdir:~/projects/faxiansheng/"]
+    path = ~/projects/faxiansheng/.gitconfig

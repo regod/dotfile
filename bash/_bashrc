@@ -32,3 +32,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 [ -f ~/.hundun.sh ] && source ~/.hundun.sh
 [ -f ~/.gengmei.sh ] && source ~/.gengmei.sh
 
+alias fxs_ssh='ssh -i ~/.ssh/fxs_id_rsa'
+alias fxs_scp='scp -i ~/.ssh/fxs_id_rsa'
+complete -F _ssh fxs_ssh
+complete -o nospace -F _scp fxs_scp
+
+alias rdenv='source ~/envs/regod/regod/bin/activate'
