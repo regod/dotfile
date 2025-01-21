@@ -7,3 +7,5 @@
     path = ~/projects/gengmei/.gitconfig
 [includeIf "gitdir:~/projects/faxiansheng/"]
     path = ~/projects/faxiansheng/.gitconfig
+[core]
+	quotepath = false

@@ -43,11 +43,11 @@ function make_env_py3() {
 }
 
 function cd() {
-    builtin cd $1
+    builtin cd "$1"
     prj_path=`pwd`
-    prj_name=`basename $prj_path`
-    prj_dir=`dirname $prj_path`
-    if [ ${prj_dir:0-16}"x" == "projects/gengmeix" ];then
+    prj_name=`basename "$prj_path"`
+    prj_dir=`dirname "$prj_path"`
+    if [ "${prj_dir:0-16}""x" == "projects/gengmeix" ];then
         deactivate >/dev/null 2>&1
         act
     fi
